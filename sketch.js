@@ -42,7 +42,7 @@ function setup() {
 	//sixth layer
 	box15 = new Box(450,220,70,70);
 
-	ball = new Ground(100,350,50,50);
+	ball = new Ball(100,350,50,50);
     slingshot = new SlingShot(ball.body,{x:100, y:350});
 	Engine.run(engine);
   
@@ -76,7 +76,7 @@ function draw() {
 }
 
 function mouseDragged(){
-    Matter.Body.setPosition(ball.body, {x: mouseX , y: mouseY});
+Matter.Body.setPosition(ball.body,{x:mouseX,y:mouseY});
 }
 
 
